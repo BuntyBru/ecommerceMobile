@@ -1,0 +1,93 @@
+.itemsClass
+{
+    display: flex;
+    flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 10px;
+  height: 88vh;
+  overflow: auto;
+  background: #F0F0F0;
+}
+
+mat-card
+{
+    flex-basis: 48%;
+    margin-bottom: 2vW;
+    padding-top:0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img{
+    width: 100%;
+    
+}
+
+.itemDetails
+{
+    padding-left: 10px;
+    font-family: 'Varela Round'
+}
+
+.name
+{
+    color:#CDCDCD;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.price
+{
+    font-size: 16px;
+    font-weight: 600;
+    flex: 9;
+}
+
+.secondSec
+{
+    display: flex;
+    padding-right: 8px;
+    
+}
+
+.likeClass
+{
+    flex: 1;
+    display: flex;
+    color:#CDCDCD;
+    font-weight: 600;
+}
+
+.likeIcon
+{
+    font-size: 19px;
+    margin-right: 2px;
+}
+
+.sold
+{
+   /* background: #E3453D;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 60px;*/
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 90px 90px 0 0;
+border-color: #E3453D transparent transparent transparent;
+position: absolute;
+    top: 0;
+}
+
+.textSold
+{
+    transform: rotate(312deg);
+    padding-top: 10px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    z-index: 5;
+}

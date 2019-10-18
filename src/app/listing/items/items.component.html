@@ -1,0 +1,39 @@
+
+<div class="itemsClass" >
+        <mat-card *ngFor = 'let item of backService.listDataInterface' (click)="onItemDetails(item)">
+            <img src= {{item.image}}/>
+            <div class="itemDetails">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <div class="secondSec">
+                        <div class="price">
+                                <span>¥ </span>{{item.price}}
+                          </div>
+                          <div class="likeClass">
+                             
+                             <div>
+                                    <i class="likeIcon material-icons">
+                                            favorite_border
+                                            </i>
+                            </div>
+                            <div>
+                                    {{item.like_count}}
+                                     
+                            </div> 
+                                    
+                                    
+                          </div>
+                </div>
+               
+
+            </div>
+        <div [hidden] = "!item.is_sold_out">
+                        <div class="sold"></div>
+                        <div class="textSold">SOLD</div>
+        </div>    
+        
+        </mat-card>
+        
+        
+</div>

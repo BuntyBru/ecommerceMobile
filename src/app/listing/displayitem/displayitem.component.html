@@ -1,0 +1,51 @@
+<mat-toolbar>
+  
+        
+    <i class="material-icons reorderClass" (click)="goBack()" >keyboard_arrow_left</i>
+    <div class="inputClass"> {{backService.currentEntry.name}} </div>
+    <i class="material-icons notificationClass">search</i>
+    <i class="material-icons doneClass">present_to_all</i>
+
+</mat-toolbar>
+
+<div class="imageDiv">
+    <img class="itemImage" src = {{backService.currentEntry.image}}/>
+    <p class="itemName">{{backService.currentEntry.name}}</p>
+
+    <div class="itemDetails">
+    <div class="likeCount">
+            <div class="likeIconParent">
+                    <i class="likeIcon material-icons">
+                            favorite_border
+                            </i>
+            </div>
+            <div class="likeCountEntry">
+                    {{backService.currentEntry.like_count}}
+            </div>
+            <div class="commentCountEntry">
+                    <i class="commentIcon material-icons">
+                            comment
+                            </i>
+                    {{backService.currentEntry.cot_count}}
+            </div>
+
+    </div>
+    <div class="description">
+        {{backService.currentEntry.description}}
+
+    </div>
+
+
+    </div>
+</div>
+    
+
+<div class="bottomData">
+    <div class="price">
+       <span>¥ </span> {{backService.currentEntry.price}} <span class="shippingCharge">+ {{backService.currentEntry.shipping_fee}}</span>
+    </div>
+    <div class="gotoCart">
+        <button class="cartBtn">Cart</button>
+    </div>
+
+</div>

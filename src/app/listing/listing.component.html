@@ -1,0 +1,26 @@
+<mat-toolbar>
+  
+        
+                <i class="material-icons reorderClass">reorder</i>
+                <input class="inputClass" type="text" placeholder="Search"/>
+                <i class="material-icons notificationClass">notifications_none</i>
+                <i class="material-icons doneClass">done</i>
+        
+</mat-toolbar>
+<mat-toolbar class="categoryClass">
+        <div class="itemNames" *ngFor= 'let item of backService.categoryData'  [ngClass]="(item.click==true)?'clickedBtn':'likeBtn'" (click)='onitemClick(item)'>
+                {{item.name}}
+        </div>
+</mat-toolbar>
+
+<div class="bottomCam">
+        <i class="material-icons camIcon">
+                camera_alt
+                </i>
+</div>
+
+
+<div class="listTable">
+<app-items></app-items>
+
+</div>
